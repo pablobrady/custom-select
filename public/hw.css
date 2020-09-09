@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select SELECT {
+  height: 40px;
+  box-shadow: 0 10px 25px white;
+  font-size: 16px;
+  padding: 3px 10px;
+  background: lightgoldenrodyellow;
+  color: black;
+  border: 1px solid orange;
+
+   /* appearance: none;  removes default styling, often on diff elements */
+}
+
+
+.arrow-updown,
+.arrow-down {
+  position: absolute; top: 0; right: 0;
+  display: block; /* inline is default */
+  background: white;
+  border: 1px solid blue;
+  height: 38px;
+  width: 18px;
+  pointer-events: none;
+}
+
+.arrow-updown::before, 
+.arrow-updown::after,
+.arrow-down::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-updown::before {
+  border-left:   5px solid transparent;
+  border-right:  5px solid transparent;
+  border-bottom: 6px solid darkslategray;
+
+  top: 40%;
+}
+
+.arrow-updown::after {
+  border-left:   5px solid transparent;
+  border-right:  5px solid transparent;
+  border-top: 6px solid darkslategray;
+
+  top: 65%;
+}
+
+.arrow-down::after {
+  border-left:   5px solid transparent;
+  border-right:  5px solid transparent;
+  border-top: 6px solid darkslategray;
+
+  top: 50%;
+}
